@@ -588,7 +588,6 @@ IPC 1005 chip</description>
 <wire x1="-1.9558" y1="-4.191" x2="-2.9972" y2="-4.191" width="0.1524" layer="51"/>
 <wire x1="-2.9972" y1="-4.191" x2="-2.9972" y2="-4.699" width="0.1524" layer="51"/>
 <wire x1="-2.9972" y1="-4.699" x2="-1.9558" y2="-4.699" width="0.1524" layer="51"/>
-<wire x1="-1.9558" y1="-4.9784" x2="1.9558" y2="-4.9784" width="0.1524" layer="51"/>
 <wire x1="-1.9558" y1="1.1684" x2="-1.9558" y2="-4.9784" width="0.1524" layer="51"/>
 <smd name="9" x="2.3622" y="-4.445" dx="1.9812" dy="0.5588" layer="1"/>
 <smd name="10" x="2.3622" y="-3.175" dx="1.9812" dy="0.5588" layer="1"/>
@@ -611,6 +610,12 @@ IPC 1005 chip</description>
 <wire x1="2.9972" y1="-0.889" x2="2.9972" y2="-0.381" width="0.1524" layer="51"/>
 <wire x1="2.9972" y1="-0.381" x2="1.9558" y2="-0.381" width="0.1524" layer="51"/>
 <wire x1="1.9558" y1="-4.9784" x2="1.9558" y2="1.1684" width="0.1524" layer="51"/>
+<wire x1="1.9558" y1="-4.9784" x2="0.3048" y2="-4.9784" width="0.1524" layer="51"/>
+<wire x1="0.3048" y1="-4.9784" x2="-0.3048" y2="-4.9784" width="0.1524" layer="51"/>
+<wire x1="-0.3048" y1="-4.9784" x2="-1.9558" y2="-4.9784" width="0.1524" layer="51"/>
+<wire x1="1.1684" y1="-4.9784" x2="0.3048" y2="-4.9784" width="0.1524" layer="21"/>
+<wire x1="0.3048" y1="-4.9784" x2="-0.3048" y2="-4.9784" width="0.1524" layer="21"/>
+<wire x1="-0.3048" y1="-4.9784" x2="-1.1684" y2="-4.9784" width="0.1524" layer="21"/>
 </package>
 <package name="SOT23">
 <description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
@@ -634,22 +639,22 @@ IPC 1005 chip</description>
 <package name="EC2">
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
-<pad name="1" x="0" y="0" drill="1.016" shape="square" rot="R90"/>
-<pad name="3" x="5.08" y="0" drill="1.016" rot="R90"/>
+<pad name="1" x="0" y="0" drill="0.8" shape="square" rot="R90"/>
+<pad name="3" x="5.08" y="0" drill="0.8" rot="R90"/>
 <text x="-1.27" y="6.731" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
 <text x="4.445" y="6.731" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
-<pad name="4" x="7.62" y="0" drill="1.016" rot="R90"/>
+<pad name="4" x="7.62" y="0" drill="0.8" rot="R90"/>
 <rectangle x1="9.906" y1="-0.254" x2="10.414" y2="0.254" layer="51"/>
-<pad name="5" x="10.16" y="0" drill="1.016" rot="R90"/>
+<pad name="5" x="10.16" y="0" drill="0.8" rot="R90"/>
 <rectangle x1="9.906" y1="4.826" x2="10.414" y2="5.334" layer="51"/>
-<pad name="8" x="10.16" y="5.08" drill="1.016" rot="R90"/>
+<pad name="8" x="10.16" y="5.08" drill="0.8" rot="R90"/>
 <rectangle x1="7.366" y1="4.826" x2="7.874" y2="5.334" layer="51"/>
-<pad name="9" x="7.62" y="5.08" drill="1.016" rot="R90"/>
+<pad name="9" x="7.62" y="5.08" drill="0.8" rot="R90"/>
 <rectangle x1="4.826" y1="4.826" x2="5.334" y2="5.334" layer="51"/>
-<pad name="10" x="5.08" y="5.08" drill="1.016" rot="R90"/>
+<pad name="10" x="5.08" y="5.08" drill="0.8" rot="R90"/>
 <rectangle x1="-0.254" y1="4.826" x2="0.254" y2="5.334" layer="51"/>
-<pad name="12" x="0" y="5.08" drill="1.016" rot="R90"/>
+<pad name="12" x="0" y="5.08" drill="0.8" rot="R90"/>
 <wire x1="-1.27" y1="6.35" x2="13.8" y2="6.35" width="0.127" layer="21"/>
 <wire x1="13.8" y1="6.35" x2="13.8" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="13.8" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="21"/>

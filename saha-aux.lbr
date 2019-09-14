@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="4" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -697,7 +697,6 @@ IPC 1005 chip</description>
 <wire x1="-1.9558" y1="-4.191" x2="-2.9972" y2="-4.191" width="0.1524" layer="51"/>
 <wire x1="-2.9972" y1="-4.191" x2="-2.9972" y2="-4.699" width="0.1524" layer="51"/>
 <wire x1="-2.9972" y1="-4.699" x2="-1.9558" y2="-4.699" width="0.1524" layer="51"/>
-<wire x1="-1.9558" y1="-4.9784" x2="1.9558" y2="-4.9784" width="0.1524" layer="51"/>
 <wire x1="-1.9558" y1="1.1684" x2="-1.9558" y2="-4.9784" width="0.1524" layer="51"/>
 <smd name="9" x="2.3622" y="-4.445" dx="1.9812" dy="0.5588" layer="1"/>
 <smd name="10" x="2.3622" y="-3.175" dx="1.9812" dy="0.5588" layer="1"/>
@@ -720,6 +719,12 @@ IPC 1005 chip</description>
 <wire x1="2.9972" y1="-0.889" x2="2.9972" y2="-0.381" width="0.1524" layer="51"/>
 <wire x1="2.9972" y1="-0.381" x2="1.9558" y2="-0.381" width="0.1524" layer="51"/>
 <wire x1="1.9558" y1="-4.9784" x2="1.9558" y2="1.1684" width="0.1524" layer="51"/>
+<wire x1="1.9558" y1="-4.9784" x2="0.3048" y2="-4.9784" width="0.1524" layer="51"/>
+<wire x1="0.3048" y1="-4.9784" x2="-0.3048" y2="-4.9784" width="0.1524" layer="51"/>
+<wire x1="-0.3048" y1="-4.9784" x2="-1.9558" y2="-4.9784" width="0.1524" layer="51"/>
+<wire x1="1.1684" y1="-4.9784" x2="0.3048" y2="-4.9784" width="0.1524" layer="21"/>
+<wire x1="0.3048" y1="-4.9784" x2="-0.3048" y2="-4.9784" width="0.1524" layer="21"/>
+<wire x1="-0.3048" y1="-4.9784" x2="-1.1684" y2="-4.9784" width="0.1524" layer="21"/>
 </package>
 <package name="SOT23">
 <description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
