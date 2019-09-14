@@ -2491,6 +2491,9 @@ IPC 1005 chip</description>
 </class>
 <class number="1" name="CC" width="0.25" drill="0.3">
 </class>
+<class number="2" name="Rele" width="1" drill="0">
+<clearance class="2" value="1"/>
+</class>
 </classes>
 <parts>
 <part name="FRAME1" library="saha-aux" deviceset="DINA3_L" device=""/>
@@ -2501,7 +2504,6 @@ IPC 1005 chip</description>
 <part name="GND2" library="saha-aux" deviceset="GND" device=""/>
 <part name="C1" library="saha-aux" deviceset="CAP" device="0805" value="22u"/>
 <part name="C2" library="saha-aux" deviceset="CAP" device="0805" value="22u"/>
-<part name="C3" library="saha-aux" deviceset="CAP" device="0603" value="100n"/>
 <part name="X2" library="saha-aux" deviceset="S4B-PH-SM4-TB" device=""/>
 <part name="+5V3" library="saha-aux" deviceset="+5V" device=""/>
 <part name="GND3" library="saha-aux" deviceset="GND" device=""/>
@@ -2546,7 +2548,7 @@ IPC 1005 chip</description>
 <part name="C24" library="saha-cpu" deviceset="CAP" device="0603" value="100n 0603"/>
 <part name="GND35" library="saha-cpu" deviceset="GND" device=""/>
 <part name="R22" library="saha-cpu" deviceset="RES" device="0805" value="499R 0805"/>
-<part name="X6" library="saha-cpu" deviceset="S8B-PH-SM4-TB" device=""/>
+<part name="X7" library="saha-cpu" deviceset="S8B-PH-SM4-TB" device=""/>
 <part name="+5V15" library="saha-cpu" deviceset="+5V" device=""/>
 <part name="R24" library="saha-cpu" deviceset="RES" device="0603" value="33k2"/>
 <part name="C25" library="saha-cpu" deviceset="CAP" device="0603" value="100n 0603"/>
@@ -2608,7 +2610,7 @@ IPC 1005 chip</description>
 <part name="H3" library="saha-aux" deviceset="LED" device="-GRN"/>
 <part name="GND21" library="saha-aux" deviceset="GND" device=""/>
 <part name="K4" library="saha-aux" deviceset="EC2-5NU" device=""/>
-<part name="X7" library="saha-aux" deviceset="EBWA-03-B" device=""/>
+<part name="X6" library="saha-aux" deviceset="EBWA-03-B" device=""/>
 <part name="C11" library="saha-aux" deviceset="CAP" device="0603" value="2u2"/>
 <part name="R16" library="saha-aux" deviceset="RES" device="0603" value="30k1"/>
 <part name="R17" library="saha-aux" deviceset="RES" device="0805" value="49R9"/>
@@ -2625,10 +2627,25 @@ IPC 1005 chip</description>
 <part name="V10" library="saha-aux" deviceset="MMDL914" device=""/>
 <part name="V11" library="saha-aux" deviceset="MMDL914" device=""/>
 <part name="V12" library="saha-aux" deviceset="MMDL914" device=""/>
+<part name="R19" library="saha-aux" deviceset="RES" device="0603" value="0R0"/>
+<part name="R20" library="saha-aux" deviceset="RES" device="0603" value="0R0"/>
+<part name="R21" library="saha-aux" deviceset="RES" device="0603" value="0R0"/>
+<part name="GND26" library="saha-aux" deviceset="GND" device=""/>
+<part name="GND27" library="saha-aux" deviceset="GND" device=""/>
+<part name="GND28" library="saha-aux" deviceset="GND" device=""/>
+<part name="C3" library="saha-aux" deviceset="CAP" device="0805" value="22u"/>
+<part name="C12" library="saha-aux" deviceset="CAP" device="0805" value="22u"/>
+<part name="C13" library="saha-aux" deviceset="CAP" device="0805" value="22u"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="292.1" y="116.84" size="3.175" layer="97">LM75     
+PCA9557DR
+24C64    </text>
+<text x="322.58" y="116.84" size="3.175" layer="97">0x48..0x4F
+0x18..0x1F
+0x50..0x57</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -2660,10 +2677,6 @@ IPC 1005 chip</description>
 <instance part="C2" gate="G$1" x="68.58" y="66.04" smashed="yes">
 <attribute name="NAME" x="70.104" y="66.421" size="1.778" layer="95"/>
 <attribute name="VALUE" x="70.104" y="61.341" size="1.778" layer="96"/>
-</instance>
-<instance part="C3" gate="G$1" x="78.74" y="66.04" smashed="yes">
-<attribute name="NAME" x="80.264" y="66.421" size="1.778" layer="95"/>
-<attribute name="VALUE" x="80.264" y="61.341" size="1.778" layer="96"/>
 </instance>
 <instance part="X2" gate="G$1" x="20.32" y="96.52" smashed="yes">
 <attribute name="VALUE" x="19.05" y="88.9" size="1.778" layer="96"/>
@@ -2797,6 +2810,39 @@ IPC 1005 chip</description>
 <instance part="GND9" gate="1" x="43.18" y="175.26" smashed="yes">
 <attribute name="VALUE" x="40.64" y="172.72" size="1.778" layer="96"/>
 </instance>
+<instance part="R19" gate="G$1" x="119.38" y="175.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="117.8814" y="171.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="122.682" y="171.45" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R20" gate="G$1" x="111.76" y="175.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="110.2614" y="171.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="115.062" y="171.45" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R21" gate="G$1" x="104.14" y="175.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="102.6414" y="171.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="107.442" y="171.45" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND26" gate="1" x="104.14" y="165.1" smashed="yes">
+<attribute name="VALUE" x="101.6" y="162.56" size="1.778" layer="96"/>
+</instance>
+<instance part="GND27" gate="1" x="111.76" y="165.1" smashed="yes">
+<attribute name="VALUE" x="109.22" y="162.56" size="1.778" layer="96"/>
+</instance>
+<instance part="GND28" gate="1" x="119.38" y="165.1" smashed="yes">
+<attribute name="VALUE" x="116.84" y="162.56" size="1.778" layer="96"/>
+</instance>
+<instance part="C3" gate="G$1" x="78.74" y="66.04" smashed="yes">
+<attribute name="NAME" x="80.264" y="66.421" size="1.778" layer="95"/>
+<attribute name="VALUE" x="80.264" y="61.341" size="1.778" layer="96"/>
+</instance>
+<instance part="C12" gate="G$1" x="88.9" y="66.04" smashed="yes">
+<attribute name="NAME" x="90.424" y="66.421" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.424" y="61.341" size="1.778" layer="96"/>
+</instance>
+<instance part="C13" gate="G$1" x="99.06" y="66.04" smashed="yes">
+<attribute name="NAME" x="100.584" y="66.421" size="1.778" layer="95"/>
+<attribute name="VALUE" x="100.584" y="61.341" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -2876,9 +2922,15 @@ IPC 1005 chip</description>
 <wire x1="78.74" y1="71.12" x2="88.9" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="71.12" x2="68.58" y2="68.58" width="0.1524" layer="91"/>
 <junction x="68.58" y="71.12"/>
-<pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="71.12" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
 <junction x="78.74" y="71.12"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="71.12" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="71.12" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
+<junction x="88.9" y="71.12"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="71.12" x2="99.06" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X2" gate="G$1" pin="1"/>
@@ -2971,9 +3023,15 @@ IPC 1005 chip</description>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="60.96" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
 <junction x="68.58" y="58.42"/>
-<pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="60.96" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
 <junction x="78.74" y="58.42"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="60.96" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="60.96" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
+<junction x="88.9" y="58.42"/>
 </segment>
 <segment>
 <pinref part="X2" gate="G$1" pin="3"/>
@@ -3034,6 +3092,21 @@ IPC 1005 chip</description>
 <wire x1="50.8" y1="180.34" x2="43.18" y2="180.34" width="0.1524" layer="91"/>
 <junction x="43.18" y="180.34"/>
 </segment>
+<segment>
+<pinref part="GND28" gate="1" pin="GND"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="167.64" x2="119.38" y2="170.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND27" gate="1" pin="GND"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="167.64" x2="111.76" y2="170.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND26" gate="1" pin="GND"/>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="167.64" x2="104.14" y2="170.18" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="A0" class="0">
 <segment>
@@ -3051,6 +3124,9 @@ IPC 1005 chip</description>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="200.66" x2="119.38" y2="198.12" width="0.1524" layer="91"/>
 <label x="137.16" y="198.12" size="1.778" layer="95"/>
+<pinref part="R19" gate="G$1" pin="2"/>
+<wire x1="119.38" y1="180.34" x2="119.38" y2="198.12" width="0.1524" layer="91"/>
+<junction x="119.38" y="198.12"/>
 </segment>
 </net>
 <net name="A1" class="0">
@@ -3069,6 +3145,9 @@ IPC 1005 chip</description>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="111.76" y1="195.58" x2="111.76" y2="200.66" width="0.1524" layer="91"/>
 <label x="137.16" y="195.58" size="1.778" layer="95"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="111.76" y1="180.34" x2="111.76" y2="195.58" width="0.1524" layer="91"/>
+<junction x="111.76" y="195.58"/>
 </segment>
 </net>
 <net name="A2" class="0">
@@ -3087,6 +3166,9 @@ IPC 1005 chip</description>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="104.14" y1="193.04" x2="104.14" y2="200.66" width="0.1524" layer="91"/>
 <label x="137.16" y="193.04" size="1.778" layer="95"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="193.04" x2="104.14" y2="180.34" width="0.1524" layer="91"/>
+<junction x="104.14" y="193.04"/>
 </segment>
 </net>
 <net name="RESET_N" class="0">
@@ -3181,7 +3263,7 @@ IPC 1005 chip</description>
 <attribute name="NAME" x="171.6786" y="181.61" size="1.778" layer="95" rot="MR90"/>
 <attribute name="VALUE" x="166.878" y="181.61" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="X6" gate="G$1" x="259.08" y="172.72" smashed="yes" rot="MR0">
+<instance part="X7" gate="G$1" x="259.08" y="172.72" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="260.35" y="154.94" size="1.778" layer="96" rot="MR0"/>
 <attribute name="NAME" x="260.35" y="181.102" size="1.778" layer="95" rot="MR0"/>
 </instance>
@@ -3292,19 +3374,19 @@ IPC 1005 chip</description>
 <pinref part="GND38" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="X6" gate="G$1" pin="2"/>
+<pinref part="X7" gate="G$1" pin="2"/>
 <wire x1="251.46" y1="175.26" x2="238.76" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="175.26" x2="238.76" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="X6" gate="G$1" pin="8"/>
+<pinref part="X7" gate="G$1" pin="8"/>
 <wire x1="238.76" y1="170.18" x2="238.76" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="165.1" x2="238.76" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="160.02" x2="238.76" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="160.02" x2="238.76" y2="160.02" width="0.1524" layer="91"/>
 <junction x="238.76" y="160.02"/>
-<pinref part="X6" gate="G$1" pin="6"/>
+<pinref part="X7" gate="G$1" pin="6"/>
 <wire x1="251.46" y1="165.1" x2="238.76" y2="165.1" width="0.1524" layer="91"/>
 <junction x="238.76" y="165.1"/>
-<pinref part="X6" gate="G$1" pin="4"/>
+<pinref part="X7" gate="G$1" pin="4"/>
 <wire x1="251.46" y1="170.18" x2="238.76" y2="170.18" width="0.1524" layer="91"/>
 <junction x="238.76" y="170.18"/>
 <pinref part="GND39" gate="1" pin="GND"/>
@@ -3329,7 +3411,7 @@ IPC 1005 chip</description>
 <junction x="170.18" y="177.8"/>
 <pinref part="R22" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="177.8" x2="251.46" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="X6" gate="G$1" pin="1"/>
+<pinref part="X7" gate="G$1" pin="1"/>
 <label x="246.38" y="177.8" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
@@ -3353,7 +3435,7 @@ IPC 1005 chip</description>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="152.4" x2="218.44" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="152.4" x2="218.44" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="X6" gate="G$1" pin="3"/>
+<pinref part="X7" gate="G$1" pin="3"/>
 <wire x1="218.44" y1="172.72" x2="251.46" y2="172.72" width="0.1524" layer="91"/>
 <label x="246.38" y="172.72" size="1.778" layer="95" rot="MR0"/>
 </segment>
@@ -3377,7 +3459,7 @@ IPC 1005 chip</description>
 <junction x="170.18" y="124.46"/>
 <pinref part="R27" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="124.46" x2="220.98" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="X6" gate="G$1" pin="5"/>
+<pinref part="X7" gate="G$1" pin="5"/>
 <wire x1="220.98" y1="124.46" x2="220.98" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="167.64" x2="251.46" y2="167.64" width="0.1524" layer="91"/>
 <label x="246.38" y="167.64" size="1.778" layer="95" rot="MR0"/>
@@ -3403,7 +3485,7 @@ IPC 1005 chip</description>
 <pinref part="R29" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="96.52" x2="226.06" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="96.52" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="X6" gate="G$1" pin="7"/>
+<pinref part="X7" gate="G$1" pin="7"/>
 <wire x1="226.06" y1="162.56" x2="251.46" y2="162.56" width="0.1524" layer="91"/>
 <label x="246.38" y="162.56" size="1.778" layer="95" rot="MR0"/>
 </segment>
@@ -3577,7 +3659,7 @@ IPC 1005 chip</description>
 <attribute name="NAME" x="294.64" y="140.97" size="1.27" layer="95"/>
 <attribute name="VALUE" x="294.64" y="138.43" size="1.27" layer="96"/>
 </instance>
-<instance part="X7" gate="G$1" x="358.14" y="116.84" smashed="yes" rot="MR0">
+<instance part="X6" gate="G$1" x="358.14" y="116.84" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="361.95" y="109.22" size="1.778" layer="96" rot="MR0"/>
 <attribute name="NAME" x="361.95" y="122.682" size="1.778" layer="95" rot="MR0"/>
 </instance>
@@ -3644,7 +3726,7 @@ IPC 1005 chip</description>
 <busses>
 </busses>
 <nets>
-<net name="N$5" class="0">
+<net name="NC1" class="2">
 <segment>
 <pinref part="K1" gate="G$1" pin="NC1"/>
 <wire x1="134.62" y1="187.96" x2="142.24" y2="187.96" width="0.1524" layer="91"/>
@@ -3654,9 +3736,10 @@ IPC 1005 chip</description>
 <wire x1="142.24" y1="177.8" x2="142.24" y2="187.96" width="0.1524" layer="91"/>
 <junction x="142.24" y="187.96"/>
 <pinref part="X3" gate="G$1" pin="1"/>
+<label x="154.94" y="187.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="NO1" class="2">
 <segment>
 <pinref part="K1" gate="G$1" pin="NO1"/>
 <wire x1="134.62" y1="182.88" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
@@ -3666,9 +3749,10 @@ IPC 1005 chip</description>
 <wire x1="134.62" y1="172.72" x2="144.78" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="172.72" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
 <junction x="144.78" y="182.88"/>
+<label x="154.94" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="COM1" class="2">
 <segment>
 <pinref part="K1" gate="G$1" pin="COM1"/>
 <wire x1="101.6" y1="185.42" x2="96.52" y2="185.42" width="0.1524" layer="91"/>
@@ -3681,6 +3765,7 @@ IPC 1005 chip</description>
 <pinref part="K1" gate="G$1" pin="COM2"/>
 <wire x1="101.6" y1="175.26" x2="96.52" y2="175.26" width="0.1524" layer="91"/>
 <junction x="96.52" y="175.26"/>
+<label x="154.94" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RELAY_1" class="0">
@@ -3751,6 +3836,26 @@ IPC 1005 chip</description>
 <pinref part="V12" gate="G$1" pin="C"/>
 <wire x1="269.24" y1="134.62" x2="287.02" y2="134.62" width="0.1524" layer="91"/>
 <junction x="287.02" y="134.62"/>
+</segment>
+<segment>
+<pinref part="K3" gate="G$1" pin="COILP"/>
+<wire x1="289.56" y1="203.2" x2="287.02" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="+5V20" gate="G$2" pin="+5V"/>
+<wire x1="287.02" y1="203.2" x2="287.02" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="V11" gate="G$1" pin="C"/>
+<wire x1="269.24" y1="203.2" x2="287.02" y2="203.2" width="0.1524" layer="91"/>
+<junction x="287.02" y="203.2"/>
+<label x="276.86" y="203.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="K2" gate="G$1" pin="COILP"/>
+<wire x1="101.6" y1="134.62" x2="99.06" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="+5V18" gate="G$2" pin="+5V"/>
+<wire x1="99.06" y1="134.62" x2="99.06" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="V10" gate="G$1" pin="C"/>
+<wire x1="81.28" y1="134.62" x2="99.06" y2="134.62" width="0.1524" layer="91"/>
+<junction x="99.06" y="134.62"/>
+<label x="91.44" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -3842,7 +3947,7 @@ IPC 1005 chip</description>
 <wire x1="25.4" y1="160.02" x2="25.4" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="NC2" class="2">
 <segment>
 <pinref part="K2" gate="G$1" pin="NC1"/>
 <wire x1="134.62" y1="119.38" x2="142.24" y2="119.38" width="0.1524" layer="91"/>
@@ -3852,9 +3957,10 @@ IPC 1005 chip</description>
 <wire x1="142.24" y1="109.22" x2="142.24" y2="119.38" width="0.1524" layer="91"/>
 <junction x="142.24" y="119.38"/>
 <pinref part="X4" gate="G$1" pin="1"/>
+<label x="154.94" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="NO2" class="2">
 <segment>
 <pinref part="K2" gate="G$1" pin="NO1"/>
 <wire x1="134.62" y1="114.3" x2="144.78" y2="114.3" width="0.1524" layer="91"/>
@@ -3864,9 +3970,10 @@ IPC 1005 chip</description>
 <wire x1="134.62" y1="104.14" x2="144.78" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="104.14" x2="144.78" y2="114.3" width="0.1524" layer="91"/>
 <junction x="144.78" y="114.3"/>
+<label x="154.94" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="COM2" class="2">
 <segment>
 <pinref part="K2" gate="G$1" pin="COM1"/>
 <wire x1="101.6" y1="116.84" x2="96.52" y2="116.84" width="0.1524" layer="91"/>
@@ -3879,6 +3986,7 @@ IPC 1005 chip</description>
 <pinref part="K2" gate="G$1" pin="COM2"/>
 <wire x1="101.6" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 <junction x="96.52" y="106.68"/>
+<label x="154.94" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -3923,7 +4031,7 @@ IPC 1005 chip</description>
 <wire x1="25.4" y1="91.44" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="NC3" class="2">
 <segment>
 <pinref part="K3" gate="G$1" pin="NC1"/>
 <wire x1="322.58" y1="187.96" x2="330.2" y2="187.96" width="0.1524" layer="91"/>
@@ -3933,9 +4041,10 @@ IPC 1005 chip</description>
 <wire x1="330.2" y1="177.8" x2="330.2" y2="187.96" width="0.1524" layer="91"/>
 <junction x="330.2" y="187.96"/>
 <pinref part="X5" gate="G$1" pin="1"/>
+<label x="342.9" y="187.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="NO3" class="2">
 <segment>
 <pinref part="K3" gate="G$1" pin="NO1"/>
 <wire x1="322.58" y1="182.88" x2="332.74" y2="182.88" width="0.1524" layer="91"/>
@@ -3945,9 +4054,10 @@ IPC 1005 chip</description>
 <wire x1="322.58" y1="172.72" x2="332.74" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="172.72" x2="332.74" y2="182.88" width="0.1524" layer="91"/>
 <junction x="332.74" y="182.88"/>
+<label x="342.9" y="182.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="COM3" class="2">
 <segment>
 <pinref part="K3" gate="G$1" pin="COM1"/>
 <wire x1="289.56" y1="185.42" x2="284.48" y2="185.42" width="0.1524" layer="91"/>
@@ -3960,6 +4070,7 @@ IPC 1005 chip</description>
 <pinref part="K3" gate="G$1" pin="COM2"/>
 <wire x1="289.56" y1="175.26" x2="284.48" y2="175.26" width="0.1524" layer="91"/>
 <junction x="284.48" y="175.26"/>
+<label x="342.9" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -4004,7 +4115,7 @@ IPC 1005 chip</description>
 <wire x1="213.36" y1="160.02" x2="213.36" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$26" class="0">
+<net name="NC4" class="2">
 <segment>
 <pinref part="K4" gate="G$1" pin="NC1"/>
 <wire x1="322.58" y1="119.38" x2="330.2" y2="119.38" width="0.1524" layer="91"/>
@@ -4013,22 +4124,24 @@ IPC 1005 chip</description>
 <wire x1="322.58" y1="109.22" x2="330.2" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="330.2" y1="109.22" x2="330.2" y2="119.38" width="0.1524" layer="91"/>
 <junction x="330.2" y="119.38"/>
-<pinref part="X7" gate="G$1" pin="1"/>
+<pinref part="X6" gate="G$1" pin="1"/>
+<label x="342.9" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$27" class="0">
+<net name="NO4" class="2">
 <segment>
 <pinref part="K4" gate="G$1" pin="NO1"/>
 <wire x1="322.58" y1="114.3" x2="332.74" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="X7" gate="G$1" pin="3"/>
+<pinref part="X6" gate="G$1" pin="3"/>
 <pinref part="K4" gate="G$1" pin="NO2"/>
 <wire x1="332.74" y1="114.3" x2="353.06" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="322.58" y1="104.14" x2="332.74" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="104.14" x2="332.74" y2="114.3" width="0.1524" layer="91"/>
 <junction x="332.74" y="114.3"/>
+<label x="342.9" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="COM4" class="2">
 <segment>
 <pinref part="K4" gate="G$1" pin="COM1"/>
 <wire x1="289.56" y1="116.84" x2="284.48" y2="116.84" width="0.1524" layer="91"/>
@@ -4036,11 +4149,12 @@ IPC 1005 chip</description>
 <wire x1="284.48" y1="106.68" x2="284.48" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="96.52" x2="340.36" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="340.36" y1="96.52" x2="340.36" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="X7" gate="G$1" pin="2"/>
+<pinref part="X6" gate="G$1" pin="2"/>
 <wire x1="340.36" y1="116.84" x2="353.06" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="K4" gate="G$1" pin="COM2"/>
 <wire x1="289.56" y1="106.68" x2="284.48" y2="106.68" width="0.1524" layer="91"/>
 <junction x="284.48" y="106.68"/>
+<label x="342.9" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -4113,28 +4227,6 @@ IPC 1005 chip</description>
 <junction x="213.36" y="104.14"/>
 </segment>
 </net>
-<net name="+5V1" class="0">
-<segment>
-<pinref part="K2" gate="G$1" pin="COILP"/>
-<wire x1="101.6" y1="134.62" x2="99.06" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="+5V18" gate="G$2" pin="+5V"/>
-<wire x1="99.06" y1="134.62" x2="99.06" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="V10" gate="G$1" pin="C"/>
-<wire x1="81.28" y1="134.62" x2="99.06" y2="134.62" width="0.1524" layer="91"/>
-<junction x="99.06" y="134.62"/>
-</segment>
-</net>
-<net name="+5V2" class="0">
-<segment>
-<pinref part="K3" gate="G$1" pin="COILP"/>
-<wire x1="289.56" y1="203.2" x2="287.02" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="+5V20" gate="G$2" pin="+5V"/>
-<wire x1="287.02" y1="203.2" x2="287.02" y2="205.74" width="0.1524" layer="91"/>
-<pinref part="V11" gate="G$1" pin="C"/>
-<wire x1="269.24" y1="203.2" x2="287.02" y2="203.2" width="0.1524" layer="91"/>
-<junction x="287.02" y="203.2"/>
-</segment>
-</net>
 <net name="COILN4" class="0">
 <segment>
 <pinref part="V12" gate="G$1" pin="A"/>
@@ -4157,4 +4249,10 @@ IPC 1005 chip</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
